@@ -3,8 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux';
 
+function add() {
+  return {type: "ADD"}
+}
+
+function reducer(state = 0, action)
+{
+  switch (action.type)
+  {
+    case "ADD":
+      return state + 1
+    default: 
+    return state;
+  }
+}
+
+var store = createStore(reducer) ;
+
+store.dispatch(add());
+store.subscribe(() => console.log(store.getState()));
+console.log(store.getState())
 ReactDOM.render(
+
   <React.StrictMode>
     <App />
   </React.StrictMode>,
