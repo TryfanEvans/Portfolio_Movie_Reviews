@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
+import Axios from 'axios';
 
 function add() {
   return {type: "ADD"}
@@ -24,7 +25,10 @@ var store = createStore(reducer) ;
 
 store.dispatch(add());
 store.subscribe(() => console.log(store.getState()));
-console.log(store.getState())
+console.log(store.getState());
+
+Axios.get("https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=Vh2YVntOxHyZz6MOhatQcxDMtWrFOsBP")
+.then(res => console.log(res.data.results));
 ReactDOM.render(
 
   <React.StrictMode>
