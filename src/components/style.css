@@ -7,3 +7,44 @@
     width:100vw;
     height:3rem;
 }
+
+.Navbar h1 {
+    position:fixed;
+    top:0;
+    left:1rem;
+    margin:0;
+}
+
+.Searchbar {
+    background-color: white;
+}
+
+.Searchbar input {
+    float:right;
+    margin-right:4rem;
+    margin-top:1rem;
+}
+
+.Wedge {
+    height:3rem;
+    
+}
+.Featured {
+    display:flex;
+    justify-content: center;
+    height:80vh;
+    max-width:95vw;
+    margin:auto;
+}
+
+.Featured .Main {
+    flex: 520px 0 0;
+    border: 1px red solid;
+}
+
+.Featured .List {
+    flex: 720px 0 1;
+    display: flex;
+    flex-wrap:wrap;
+    border: 1px red solid;
+}

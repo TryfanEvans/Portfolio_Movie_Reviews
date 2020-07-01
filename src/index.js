@@ -3,38 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux';
+
 import Axios from 'axios';
-
-function add() {
-  return {type: "ADD"}
-}
-
-function reducer(state = 0, action)
-{
-  switch (action.type)
-  {
-    case "ADD":
-      return state + 1
-    default: 
-    return state;
-  }
-}
-
-var store = createStore(reducer) ;
-
-store.dispatch(add());
-store.subscribe(() => console.log(store.getState()));
-console.log(store.getState());
-
-Axios.get("https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=Vh2YVntOxHyZz6MOhatQcxDMtWrFOsBP")
-.then(res => console.log(res.data.results));
 ReactDOM.render(
 
   <React.StrictMode>
+   
     <App />
   </React.StrictMode>,
   document.getElementById('root')
+  
 );
 
 // If you want your app to work offline and load faster, you can change
