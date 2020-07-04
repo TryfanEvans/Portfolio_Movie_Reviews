@@ -10,6 +10,7 @@ class Navbar extends Component {
         return (
            
             <div className = 'Navbar'>
+                <h2> Friday Night Movie Reviews </h2>
                 <Searchbar />
             </div>
         )

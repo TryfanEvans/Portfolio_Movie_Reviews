@@ -12,6 +12,7 @@ function App() {
     <Provider store = {store}>
     <div className="App">
       <Navbar /> 
+      <div className = "Wedge" />
       <div className = 'Featured'>
       <FeaturedList />
       <FeaturedMain />

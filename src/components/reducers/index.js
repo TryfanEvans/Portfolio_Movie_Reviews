@@ -1,4 +1,4 @@
 import {combineReducers} from 'redux'
 import searchReducer from './searchReducer.js'
-
-export default combineReducers({search: searchReducer})
+import newestReducer from './newestReducer.js'
+export default combineReducers({search: searchReducer, newest: newestReducer})
