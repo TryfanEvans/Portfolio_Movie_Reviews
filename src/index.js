@@ -5,11 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import "./font-awesome/css/font-awesome.min.css";
 import Axios from 'axios';
+import { Provider, useSelector } from "react-redux";
+import store from './components/store.js'
 ReactDOM.render(
 
   <React.StrictMode>
-   
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
   

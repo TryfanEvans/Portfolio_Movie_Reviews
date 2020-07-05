@@ -66,3 +66,41 @@
     flex-wrap:wrap;
     border: 1px red solid;
 }
+
+.SearchResults {
+        display:flex;
+        justify-content: center;
+        height:80vh;
+        max-width:95vw;
+        margin:auto;
+        flex-wrap:wrap;
+   
+}
+.MovieReview {
+    border: 2px grey solid;
+    border-radius: 1rem;
+    width:100%;
+    display:flex;
+    margin:0.3rem;
+    align-content:flex-start;
+}
+
+.MovieReview img {
+    display:inline-block;
+    border-radius:0.9rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+
+.MovieReview div {
+   margin-left:2rem;
+}
+
+.MovieReview h1, p {
+    align-self:flex-start;
+    margin:0;
+    text-align:left;
+    width:100%;
+    
+}

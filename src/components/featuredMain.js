@@ -11,7 +11,7 @@ class FeaturedMain extends Component {
     componentDidMount() {  newestReview();}
     render() {
        
-      console.log(this.props.newest)
+    
       
         return (
             <div className = 'Main'>
