@@ -1,3 +1,7 @@
+.App {
+    background-color:#333333;
+}
+
 .Navbar {
     background-color:black;
     color:white;
@@ -8,12 +12,22 @@
     height:2.5rem;
 }
 
-.Navbar h2 {
+.Navbar button {
     position:fixed;
-    top:0;
+    top:0.4rem;
     left:1rem;
     margin:0;
+    border:none;
+    background:none;
+    color:white;
+    font-size:1.5rem;
+    outline:none;
 }
+
+.Navbar button:hover {
+    cursor:pointer;
+}
+
 
 .Searchbar {
     background-color: white;
@@ -70,19 +84,19 @@
 .SearchResults {
         display:flex;
         justify-content: center;
-        height:80vh;
+        width:80rem;
         max-width:95vw;
         margin:auto;
         flex-wrap:wrap;
-   
 }
 .MovieReview {
-    border: 2px grey solid;
     border-radius: 1rem;
     width:100%;
     display:flex;
-    margin:0.3rem;
+    margin:0.6rem;
     align-content:flex-start;
+    background-color:white;
+    padding-right:2rem;
 }
 
 .MovieReview img {
@@ -102,7 +116,12 @@
     margin:0;
     text-align:left;
     width:100%;
-    
+    max-height:4.2rem;
+    overflow:hidden;
+}
+
+.MovieReview h1 {
+    font-size: 1.6rem;
 }
 
 .MovieReview a { 

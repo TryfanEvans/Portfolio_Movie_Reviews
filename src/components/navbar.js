@@ -4,13 +4,14 @@ import {useSelector, connect} from 'react-redux'
 import rootReducer from './reducers'
 import searchActions from './actions/search.js'
 import Searchbar from './searchbar.js'
+import home from './actions/clearSearch.js'
 class Navbar extends Component {
     
     render() {
         return (
            
             <div className = 'Navbar'>
-                <h2> Friday Night Movie Reviews </h2>
+               <button onClick = {home}>  Friday Night Movie Reviews  </button>
                 <Searchbar />
             </div>
         )

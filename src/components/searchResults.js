@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import newestReview from './actions/newest.js'
 import MovieReview from './movieReview.js'
 import { Provider, useSelector } from "react-redux";
+import not_avaliable from "./not_avaliable.png";
 
 function SearchResults() {
     const search = useSelector((state) => state.search);
@@ -10,7 +11,7 @@ function SearchResults() {
         return (
             <div className = 'SearchResults'>
              {search.map( review => 
-             <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : ''} link = { review.link.url} />
+             <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : not_avaliable} link = { review.link.url} />
                
              )}
             </div>
