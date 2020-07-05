@@ -97,10 +97,15 @@
    margin-left:2rem;
 }
 
-.MovieReview h1, p {
+.MovieReview h1, p, a {
     align-self:flex-start;
     margin:0;
     text-align:left;
     width:100%;
     
+}
+
+.MovieReview a { 
+    color:blue;
+    float:left;
 }

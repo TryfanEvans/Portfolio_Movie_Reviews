@@ -8,6 +8,7 @@ export default function MovieReview(props) {
             <h1> {props.title}</h1>
            
             <p> {props.summary} </p>
+            <a href = {props.link}> read more </a>
             </div>
         </div>
     )

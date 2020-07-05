@@ -10,7 +10,7 @@ function SearchResults() {
         return (
             <div className = 'SearchResults'>
              {search.map( review => 
-             <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : ''} />
+             <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : ''} link = { review.link.url} />
                
              )}
             </div>
