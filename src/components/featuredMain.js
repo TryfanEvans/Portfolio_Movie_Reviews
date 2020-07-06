@@ -3,12 +3,11 @@ import newestReview from './actions/newest.js'
 import {connect} from 'react-redux'
 
 class FeaturedMain extends Component {
-    constructor(props) {
-        super(props);
-      
+    componentDidMount() {
+      newestReview();
         
     }
-    componentDidMount() {  newestReview();}
+    componentDidMount() {  }
     render() {
        
     
@@ -32,6 +31,5 @@ class FeaturedMain extends Component {
     }
 }
 
-//didn't really need to use redux here, I just wanted extra practice
 const mapStateToProps = state => ({ newest: state.newest });
 export default connect( mapStateToProps, {newestReview})(FeaturedMain)

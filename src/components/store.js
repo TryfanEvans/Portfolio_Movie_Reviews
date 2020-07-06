@@ -1,4 +1,5 @@
-import {createStore} from 'redux'
+import {createStore, compose} from 'redux'
 import rootReducer from './reducers'
-var store = createStore(rootReducer)
+import { composeWithDevTools } from 'redux-devtools-extension';
+var store = createStore(rootReducer, composeWithDevTools( ))
 export default store

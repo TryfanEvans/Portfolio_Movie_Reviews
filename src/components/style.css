@@ -52,11 +52,12 @@
     height:80vh;
     max-width:95vw;
     margin:auto;
+  
 }
 
 .Featured .Main {
     flex: 420px 0 0;
-    border: 1px red solid;
+    background-color:white;
 }
 
 .Featured .Main img {
@@ -76,9 +77,12 @@
 
 .Featured .List {
     flex: 720px 0 1;
-    display: flex;
     flex-wrap:wrap;
-    border: 1px red solid;
+    background-color:white;
+}
+
+.Featured .List h1 {
+
 }
 
 .SearchResults {

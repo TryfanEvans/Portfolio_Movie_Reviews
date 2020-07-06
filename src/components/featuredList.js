@@ -1,11 +1,32 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import getList from './actions/getList.js'
+import MovieReview from './movieReview.js'
+import not_avaliable from "./not_avaliable.png";
 
-export default class featuredList extends Component {
+class FeaturedList extends Component {
+   componentDidMount() {
+         getList(); 
+    }
     render() {
+       
+        console.log(this.props.list)
         return (
             <div className = 'List'>
-                
+                <h1> Critics Picks </h1>
+                {this.props.list ?  
+                this.props.list.map( review => 
+                <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : not_avaliable} link = { review.link.url} />) 
+                : <div /> }
+            
+        
             </div>
         )
     }
 }
+
+const mapStateToProps = state => ({
+    list: state.list
+})
+
+export default connect(mapStateToProps, {getList})(FeaturedList)
