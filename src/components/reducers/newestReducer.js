@@ -3,7 +3,7 @@ export default function (state = '', action) {
         case "NEWEST":
             return action.payload[0];
         default:
-            return ""
+            return state
     }
 
 }

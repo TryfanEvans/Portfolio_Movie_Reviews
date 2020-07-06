@@ -3,7 +3,7 @@ export default function (state = [], action) {
         case "LIST":
             return action.payload;
         default:
-            return ""
+            return state
     }
 
 }

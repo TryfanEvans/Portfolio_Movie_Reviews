@@ -6,7 +6,7 @@ export default function (state = [], action) {
         case "CLEAR":
             return []
         default:
-            return ""
+            return state
     }
 
 }

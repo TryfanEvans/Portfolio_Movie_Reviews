@@ -7,7 +7,6 @@ class FeaturedMain extends Component {
       newestReview();
         
     }
-    componentDidMount() {  }
     render() {
        
     
