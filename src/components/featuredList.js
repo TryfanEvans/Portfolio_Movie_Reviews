@@ -9,15 +9,13 @@ class FeaturedList extends Component {
          getList(); 
     }
     render() {
-       
-        console.log(this.props.list)
         return (
             <div className = 'List'>
                 <h1> Critics Picks </h1>
                 {this.props.list ?  
                 this.props.list.map( review => 
                 <MovieReview title = {review.display_title} summary =  {review.summary_short} image = { review.multimedia ? review.multimedia.src : not_avaliable} link = { review.link.url} />) 
-                : <div /> }
+                : <div className="fa fa-spinner fa-spin fa-5x" style={{ width: "14rem" }} /> }
             
         
             </div>

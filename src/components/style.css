@@ -52,7 +52,8 @@
     height:80vh;
     max-width:95vw;
     margin:auto;
-  
+    flex-wrap: wrap-reverse;
+    align-content:flex-end;
 }
 
 .Featured .Main {
@@ -79,10 +80,6 @@
     flex: 720px 0 1;
     flex-wrap:wrap;
     background-color:white;
-}
-
-.Featured .List h1 {
-
 }
 
 .SearchResults {
@@ -131,4 +128,52 @@
 .MovieReview a { 
     color:blue;
     float:left;
+}
+
+.Featured .List .MovieReview {
+   margin-bottom:2rem;
+   padding-right:2rem;
+   box-sizing:border-box;
+   height:8vw;
+}
+
+.Featured .List .MovieReview img{
+     height:10vw;
+    width:auto;
+}
+
+@media (max-width: 1200px) {
+    .Featured .List .MovieReview p, a {
+        max-height:2.5rem;
+        font-size:0.9rem;
+        margin:0;
+    }
+    .Featured .List .MovieReview h1 {
+        font-size:1.2rem;
+        line-height:1.2rem;
+    }
+    .Featured .List .MovieReview div {
+        margin-left:1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .Featured .List {
+    display:flex;
+    justify-content: center;
+    width:80rem;
+    max-width:95vw;
+    margin:auto;
+    flex-wrap:wrap;
+    }
+
+    .Featured .List .MovieReview {
+        border-radius: 1rem;
+        width:100%;
+        display:flex;
+        margin:0.6rem;
+        align-content:flex-start;
+        background-color:white;
+        padding-right:2rem;
+    }
 }
